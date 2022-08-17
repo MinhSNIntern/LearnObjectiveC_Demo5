@@ -8,7 +8,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+@property (nonatomic,strong) UIPopoverController *popoverController;
+@property (nonatomic,strong) UIBarButtonItem *barButtonAdd;
 
 @end
 

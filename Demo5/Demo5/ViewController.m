@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "PopoverContentViewController.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) UIProgressView *progress;
@@ -52,7 +53,37 @@
     [self.label sizeToFit];
     self.label.center = CGPointMake(self.view.frame.size.width/2, 200);
     [self.view addSubview:self.label];
+    
+    Class popoverClass = NSClassFromString(@"UIPopoverController");
+    if(popoverClass !=nil && UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad){
+        PopoverContentViewController *content = [[PopoverContentViewController alloc] initWithNibName:nil bundle:nil];
+        
+        self.popoverController = [[UIPopoverController alloc] initWithContentViewController:content];
+        content.popoverController = self.popoverController;
+        self.barButtonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(performAddWithPopover:)];
+    }else{
+        
+        self.barButtonAdd = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(performAddWithAlertView:)];
+    }
+    
+    [self.navigationItem setRightBarButtonItem: self.barButtonAdd];
 }
-
+- (void) performAddWithPopover:(id) paramSender{
+    
+    [self.popoverController presentPopoverFromBarButtonItem:self.barButtonAdd permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+}
+-(void) performAddWithAlertView:(id) paramSender{
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Add ..." message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *actionAddPhoto = [UIAlertAction actionWithTitle:@"Photo" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *actionAddAudio = [UIAlertAction actionWithTitle:@"Audio" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:actionAddPhoto];
+    [alert addAction:actionAddAudio];
+    [alert addAction:actionCancel];
+    [self presentViewController:alert animated:YES completion:nil];
+    
+}
 
 @end

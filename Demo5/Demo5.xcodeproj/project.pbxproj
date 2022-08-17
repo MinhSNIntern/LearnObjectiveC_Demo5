@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B57AD79628AC7F6700755321 /* PopoverContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B57AD79528AC7F6700755321 /* PopoverContentViewController.m */; };
 		B5FBD3D528AB6E40000BA132 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBD3D428AB6E40000BA132 /* AppDelegate.m */; };
 		B5FBD3D828AB6E40000BA132 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBD3D728AB6E40000BA132 /* SceneDelegate.m */; };
 		B5FBD3DB28AB6E40000BA132 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5FBD3DA28AB6E40000BA132 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B57AD79428AC7F6700755321 /* PopoverContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PopoverContentViewController.h; sourceTree = "<group>"; };
+		B57AD79528AC7F6700755321 /* PopoverContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PopoverContentViewController.m; sourceTree = "<group>"; };
 		B5FBD3D028AB6E40000BA132 /* Demo5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo5.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5FBD3D328AB6E40000BA132 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5FBD3D428AB6E40000BA132 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				B5FBD3E128AB6E44000BA132 /* LaunchScreen.storyboard */,
 				B5FBD3E428AB6E44000BA132 /* Info.plist */,
 				B5FBD3E528AB6E44000BA132 /* main.m */,
+				B57AD79428AC7F6700755321 /* PopoverContentViewController.h */,
+				B57AD79528AC7F6700755321 /* PopoverContentViewController.m */,
 			);
 			path = Demo5;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				B5FBD3DB28AB6E40000BA132 /* ViewController.m in Sources */,
 				B5FBD3D528AB6E40000BA132 /* AppDelegate.m in Sources */,
 				B5FBD3E628AB6E44000BA132 /* main.m in Sources */,
+				B57AD79628AC7F6700755321 /* PopoverContentViewController.m in Sources */,
 				B5FBD3D828AB6E40000BA132 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
